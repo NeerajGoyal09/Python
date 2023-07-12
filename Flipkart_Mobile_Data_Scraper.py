@@ -2,8 +2,8 @@ import pandas as pd
 import requests 
 from bs4 import BeautifulSoup
 
-def get_data(list_name, tag_type , class_type) :
-    data = box.find_all(tag_type, class_ = class_type)
+def get_data(list_name, tag_type , class_name) :
+    data = box.find_all(tag_type, class_ = class_name)
     for i in data :
         sep_data = i.text
         list_name.append(sep_data)
