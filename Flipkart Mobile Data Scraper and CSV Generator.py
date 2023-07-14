@@ -49,7 +49,7 @@ df["Prices"] = df["Prices"].str.replace(",","")
 df["Prices"] = df["Prices"].astype(int)
 
 initial_rows = df.shape[0]
-
+# filtering mobile phones with prices exceeding 50,000 rupees
 df = df[df['Prices'] <= 50000]
 
 removed_rows = initial_rows - df.shape[0]
